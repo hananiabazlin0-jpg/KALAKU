@@ -1,0 +1,90 @@
+/* KALAKU — penyesuaian layar (tablet & ponsel) */
+
+@media (max-width: 1180px) {
+  .cal-layout { grid-template-columns: minmax(0, 1fr) 320px; }
+  .hero-card { grid-column: span 12; }
+  #focusCard { grid-column: span 12; }
+  #weekCard { grid-column: span 7; }
+  #upcomingCard { grid-column: span 5; }
+}
+
+@media (max-width: 960px) {
+  .sidebar { transform: translateX(-100%); transition: transform .25s ease; box-shadow: 20px 0 50px -20px rgba(0, 0, 0, .5); }
+  .sidebar.is-open { transform: none; }
+  .shell-main { margin-left: 0; }
+  .menu-btn { display: inline-grid; }
+  .topbar { padding: 12px 18px; }
+  .content { padding: 22px 18px 48px; }
+
+  .cal-layout, .rem-layout, .two-col { grid-template-columns: 1fr; }
+  .cal-side { position: static; }
+  #weekCard, #upcomingCard { grid-column: span 12; }
+
+  .auth { grid-template-columns: 1fr; }
+  .auth-art { display: none; }
+  .auth-brand-mobile { display: inline-flex; }
+
+  .lp-hero { grid-template-columns: 1fr; }
+  .lp-features { grid-template-columns: 1fr 1fr; }
+  .feat-wide { grid-column: span 2; }
+  .lp-steps { grid-template-columns: 1fr 1fr; row-gap: 28px; }
+  .chat { height: calc(100vh - 128px); }
+}
+
+@media (max-width: 640px) {
+  body { font-size: 15.5px; }
+  .page-title { font-size: 20px; }
+  .page-date { font-size: 12.5px; }
+  .hello-title { font-size: 26px; }
+  .card { padding: 18px; border-radius: 20px; }
+  .hero-card { grid-template-columns: 1fr; text-align: center; gap: 16px; }
+  .hero-ring { max-width: 230px; margin: 0 auto; }
+  .hero-meta { justify-content: center; }
+  .hero-info h3 { font-size: 26px; }
+
+  .cal-month { font-size: 21px; min-width: 0; flex: 1; }
+  .cal-head { gap: 10px; }
+  .cal-nav { width: 100%; justify-content: space-between; }
+  .cal-tools { width: 100%; }
+  .cal-tools .btn { flex: 1; }
+  .cal-dow, .cal-grid { gap: 4px; }
+  .day { min-height: 54px; padding: 6px 5px; border-radius: 10px; }
+  .day .n { font-size: 14px; }
+  .day .s { display: none; }
+  .day.fertile::after { width: 6px; height: 6px; right: 5px; bottom: 5px; }
+  .day.has-rem::before { width: 6px; height: 6px; right: 5px; top: 5px; }
+
+  .week-strip { gap: 4px; }
+  .wk { padding: 8px 0; border-radius: 10px; }
+  .wk b { font-size: 17px; }
+
+  .field-row { grid-template-columns: 1fr; }
+  .setting-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .setting-row .switch { align-self: flex-start; }
+
+  .chat { height: calc(100vh - 118px); border-radius: 18px; }
+  .chat-head { padding: 12px 14px; }
+  .chat-head .btn span { display: none; }
+  .chat-scroll { padding: 14px; }
+  .chat-suggest { padding: 8px 14px 0; }
+  .chat-input { padding: 10px 14px 6px; }
+  .chat-foot { padding: 0 16px 10px; }
+  .msg { max-width: 94%; }
+
+  .rem { padding: 12px; gap: 10px; }
+  .modal { padding: 20px; border-radius: 20px; }
+  .modal-foot .btn { flex: 1; }
+
+  .lp-nav-links a:not(.btn) { display: none; }
+  .lp-features { grid-template-columns: 1fr; }
+  .feat-wide { grid-column: auto; }
+  .lp-steps { grid-template-columns: 1fr; }
+  .lp-demo { padding: 20px; border-radius: 26px; }
+  .auth-title { font-size: 28px; }
+  .toasts { left: 12px; right: 12px; bottom: 12px; max-width: none; }
+}
+
+@media (max-width: 380px) {
+  .day { min-height: 46px; }
+  .topbar-actions .avatar { display: none; }
+}
